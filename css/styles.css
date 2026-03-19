@@ -1,0 +1,220 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+}
+
+body {
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+footer {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 16px 0px;
+  color: #999;
+  vertical-align: bottom;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* ================================== */
+/* Layout page CSS */
+/* ================================== */
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/hero.jpg");
+  height: 60vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-subheading {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.hero-input {
+  width: 80%;
+  height: 50px;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* ================================== */
+/* MODULE_CARDS - City Cards Styling */
+/* ================================== */
+
+.tile {
+  position: relative;
+  overflow: hidden; /* Clips the zoom effect */
+  border-radius: 8px;
+  width: 100%;
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+}
+
+/* Hover: Zoom + Brightness Reduction */
+.tile:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.5);
+}
+
+.tile-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+/* Desktop sizing for cards */
+@media (min-width: 576px) {
+  .tile img {
+    height: 350px;
+  }
+}
+
+/* Fix for Navbar spacing */
+.nav-link {
+  margin-right: 36px;
+}
+
+/* Desktop Sidebar for later modules */
+@media only screen and (min-width: 768px) {
+  #reservation {
+    width: 400px;
+    position: fixed;
+  }
+}
+
+.adventure-card {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.adventure-card:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.adventure-card img {
+  height: 300px; /* Fixed height for consistency */
+  width: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+/* Hover effect: Dim the image */
+.adventure-card:hover img {
+  filter: brightness(0.7);
+}
+
+.adventure-card .card-body {
+  padding: 12px;
+}
+
+/* Ensure price and title are aligned */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.card-text {
+  font-weight: 400;
+  color: #333;
+}
+
+
+/* Adventure Details Page Styling */
+
+.adventure-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+/* Dim effect on hover for all gallery images */
+.adventure-img:hover {
+  filter: brightness(0.7);
+  cursor: pointer;
+}
+
+/* Sticky sidebar logic for large screens */
+@media (min-width: 992px) {
+  .booking-panel {
+      position: sticky;
+      top: 20px;
+      z-index: 10;
+  }
+}
+
+/* Subtitle styling */
+.subtitle {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Content spacing */
+.adventure-content h3, .adventure-content h5 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* Fix for Adventure Details Images */
+.adventure-img {
+  width: 100%;
+  height: 400px; /* Fixed height for the big image */
+  object-fit: cover;
+}
+
+.adventure-img-small {
+  width: 100%;
+  height: calc(200px - 0.5rem); /* Half the height of the big image minus spacing */
+  object-fit: cover;
+}
+
+/* Ensure the column itself doesn't overflow */
+.adventure-content {
+  clear: both;
+}
+
+/* Hover effect from previous milestones */
+.adventure-img:hover, .adventure-img-small:hover {
+  filter: brightness(0.7);
+  transition: 0.3s;
+  cursor: pointer;
+}
